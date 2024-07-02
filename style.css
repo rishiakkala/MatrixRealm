@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif; 
+}
+
+body{
+    background: #050e2d;
+}
+
+/*NavBar*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b2141;
+    z-index: 1000;
+    position: sticky;
+}
+header .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin: 10px;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: #1cbbe7;
+    color: #050e2d;
+}
+header .action .searchbox{
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+header .action .searchbox i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: #222;
+}
+header .action .searchbox input{
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: #222;
+}
+header .user li a{
+    list-style: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1cbbe7;
+}
+
+/*Slider*/
+.container{
+    padding: 2rem;   
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 19/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%, 0%, 0.25);
+    border-radius: 1rem;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/*Home Banner*/
+.banner{
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 0px 100px;
+}
+.banner .bg{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner .bg .content{
+    width: 100%;
+    height: 100%;
+}
+.banner .bg .content h2{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content p{
+    font-size: 1em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.banner .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.banner .bg .content a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Scroll Bar*/
+::-webkit-scrollbar{
+    display: none;
+}
+
+/*About Us*/
+.about{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .contentbox{
+    width: 50%;
+    margin: 20px;
+}
+.about .contentbox h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+}
+.about .contentbox p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+.about .contentbox a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.about .contentbox a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Games Section*/
+.gamebox{
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gamebox .gamecontent{
+    width: 50%;
+    margin: 20px;
+}
+.gamebox .gamecontent h2{
+    font-size: 3em;
+    font-weight: 700;
+    color: #fff;
+}
+.gamebox .gamecontent h3{
+    font-weight: 700;
+    color: #fff;
+}
+.gamebox .gamecontent p{
+    max-width: 600px;
+    text-align: justify;
+    color: #dbd9d9;
+}
+.gamebox .gamecontent a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.gamebox .gamecontent a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Games*/
+.games{
+    padding: 0px 10px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+.games h1{
+    color: #fff;
+    margin: 10px 0;
+}
+.games ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.games ul li{
+    list-style: none;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: #fff;
+}
+.games ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.games ul li a:hover{
+    background: #1aeeef;
+    color: #050e2d;
+}
+.games .cardbox{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.games .cardbox .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.games .cardbox .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.games .cardbox .card .content{
+    padding: 10px;
+}
+.games .cardbox .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+.games .cardbox .card .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games .cardbox .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+.games .cardbox .card .info p span{
+    color: #1aeeef;
+}
+.games .cardbox .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.games .cardbox .card .info a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Tournaments*/
+.tournaments{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tournaments h1{
+    color: #fff;
+    margin: 10px 0;
+}
+.tournaments .boxbx{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.tournaments .boxbx .box{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.tournaments .boxbx .box img{
+    width: 280px;
+    height: 160px;
+    object-fit: cover;
+}
+.tournaments .boxbx .box .content{
+    padding: 10px;
+}
+.tournaments .boxbx .box .content h4{
+    color: #fff;
+    margin-top: 15px;
+}
+.tournaments .boxbx .box .content h4 span{
+    color: #1aeeef;
+}
+span{
+    font-size: 20px;
+}
+.tournaments .boxbx .box .content p{
+    text-align: justify;
+    color: #dbd9d9;
+    margin-top: 10px;
+}
+.tournaments .boxbx .box .content .btn{
+    display: flex;
+    justify-content: space-between;
+}
+.tournaments .boxbx .box .content .watch{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.tournaments .boxbx .box .content .watch:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+.tournaments .boxbx .box .content .join{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.tournaments .boxbx .box .content .join:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Footer*/
+footer{
+    padding: 10px 100px;
+}
+footer .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .info .logo{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+}
+footer .info p{
+    color: #dbd9d9;
+}
+footer .info ul{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info ul li{
+    list-style: none;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1aeeef;
+}
+footer .info ul li:hover{
+    background: #1aeeef;
+    border: none;
+}
+footer .info ul li a i{
+    font-size: 1.5em;
+    color: #fff;
+}
+footer .info ul li:hover a i{
+    color: #050e2d;
+}
+
+/*Sign Up*/
+.login-page {
+    width: 400px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.form h2{
+    color: #fff;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #1b2141;
+    max-width: 400px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+    font-family: "Poppins", sans-serif;
+    outline: 0;
+    background: #050e2d;
+    width: 100%;
+    border: 0;
+    border-radius: 7px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #fff;
+    
+}
+.form button {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #050e2d;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #1aeeef;
+    color: #050e2d;
+    font-weight: 700;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #050e2d;
+    font-size: 12px;
+}
+.form .message a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*Offers and Deals*/
+.offers{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.offers h1{
+    font-size: 2.5em;
+    color: #fff;
+    margin: 10px 0;
+}
+.offers .deals{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.offers .deals .card{
+    width: 280px;
+    border-radius: 10px;
+    margin: 20px 40px;
+    background: #1b2141;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.offers .deals .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.offers .deals .card .content{
+    padding: 10px;
+}
+.offers .deals .card .content h4{
+    color: #fff;
+    margin: 15px 0;
+}
+.offers .deals .card .info{
+    border-top: 2px solid #35407e;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.offers .deals .card .info p{
+    font-size: 1em;
+    color: #fff;
+}
+.offers .deals .card .info p span{
+    color: #1aeeef;
+}
+.offers .deals .card .info a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.offers .deals .card .info a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+/*Festive offer*/
+.foffers{
+    padding: 0px 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.foffers h1{
+    font-size: 2.5em;
+    color: #fff;
+    margin: 10px 0;
+}
+.foffers .fgame{
+    background: #1b2141;
+    padding: 20px 20px;
+    width: 70%;
+    height: 450px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.foffers .finfo{
+    background: #1b2141;
+    padding: 20px 20px;
+    width: 70%;
+    height: 450px;
+    border-radius: 5px;
+    position: relative;
+    align-items: center;
+}
+.foffers .fgame img{
+    width: 300px;
+    height: 390px;
+    border-radius: 5px;
+}
+.foffers .fgame .finfo h2{
+    top: 0;
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.foffers .fgame .finfo p{
+    font-size: 1.5em;
+    color: #dbd9d9;
+    letter-spacing: 1px;
+}
+.foffers .fgame .finfo p span{
+    color: #1aeeef;
+}
+.foffers .fgame .finfo a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #1aeeef;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.foffers .fgame .finfo a:hover{
+    background: #1aeeef;
+    border: none;
+    color: #050e2d;
+}
+
+.foffers h2{
+    font-size: 2em;
+    color: #fff;
+    margin: 10px 0;
+}
+.foffers .card {
+    width: 230px;
+    height: 310px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 450ms;
+}
+.foffers .card:hover {
+    transform: scale(1.08);
+}
+.foffers .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.foffers .card-body {
+    width: 230px;
+    height: 310px;
+    top: 0;
+    right: -1000px;
+    position: absolute;
+    background: hsla(229, 72%, 18%, 0.384);
+    backdrop-filter: blur(4px);
+    border-radius: 2px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+.foffers .card:hover .card-body {
+    right: 0;
+}
+.foffers .card-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 800;
+}
+.foffers .card-sub-title {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 300;
+}
+.foffers .card-info {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+.foffers .card-btn {
+    color: #ffffff;
+    background: linear-gradient(rgba(31, 31, 86, 0.9), rgba(2, 50, 90, 0.9));
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 200px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.row_poster:hover{
+    transform: scale(1.08);
+}
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+.row_posterlarge{
+    max-height: 250px;
+}
